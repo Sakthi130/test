@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Test Alarm</title>
+</head>
 <body>
   <h1>Test Alarm</h1>
   <button onclick="playAlarm()">Play Alarm</button>
+
   <audio id="alarmAudio" src="alarm.mp3" preload="auto"></audio>
+
   <script>
     function playAlarm() {
       const audio = document.getElementById('alarmAudio');
@@ -11,7 +16,7 @@
       setTimeout(() => {
         audio.pause();
         audio.currentTime = 0;
-      }, 5000);
+      }, 5000); // 5 seconds
     }
   </script>
 </body>
